@@ -12,7 +12,7 @@ TODO: add image to docker repository, but until then...
 #### build docker image
 -> install docker on your local (HOST) machine
 -> git clone https://github.com/sirgogo/docker-meep.git && cd docker-meep
--> docker build -t meepdocker . # makes a docker image with local Dockerfile and tag meepdocker
+-> docker build -t meepdocker .
 
 #### start a session, with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
 docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker
