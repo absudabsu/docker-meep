@@ -9,7 +9,6 @@ python-meep: https://launchpad.net/python-meep
 
 python-meep src: https://github.com/FilipDominec/python-meep-install
 
-
 ## Usage:
 
 #### pull docker image
