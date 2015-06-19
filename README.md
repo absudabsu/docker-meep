@@ -9,18 +9,18 @@ python-meep src: https://github.com/FilipDominec/python-meep-install <p></p>
 
 ## Usage:
 TODO: add image to docker repository, but until then...
-### build docker image
+#### build docker image
 -> install docker on your local (HOST) machine
 -> git clone https://github.com/sirgogo/docker-meep.git && cd docker-meep
 -> docker build -t meepdocker . # makes a docker image with local Dockerfile and tag meepdocker
 
-### start a session, with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
+#### start a session, with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
 docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker
 
-### enjoy!
+#### enjoy!
 python siex.py
 
-### some useful commands
+#### some useful commands
 docker run -i -t ubuntu:14.04 /bin/bash # get initial image to set up everything
 docker ps -a # lists available dockers (-a list of non running containers, without -a, running ones)
 docker build -t meepdocker . # makes a docker image with local Dockerfile and tag meepdocker
@@ -30,7 +30,7 @@ docker docker start -i id # starts the docker (-i means interactive (like bash),
 ## Notes on setup:
 Ideally, there are very few apps running in the docker, so its very lightweight. In my implementation, I run an extra ssh server so I can forward GUI windows to my host. Potentially, we could work around this by performing a "xhost +" on the HOST and simply setting the display variable "export DISPLAY=HOSTip:0", but it didn't seem to work for me. So ssh was the way to go.
 
-### ps -aux
+#### ps -aux
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.0  0.0  18180  3200 ?        Ss   18:36   0:00 /bin/bash
 root       857  0.0  0.0  61372  3128 ?        Ss   18:44   0:00 /usr/sbin/sshd
@@ -38,5 +38,5 @@ root       900  0.0  0.0  15572  2128 ?        R+   18:55   0:00 ps -aux
 
 Obviously if you log in via ssh, there would be about bash open. Also if you open python, meep, etc.. 
 
-### setup of ssh inside meepdocker
+#### setup of ssh inside meepdocker
 apt-get install -y openssh-server && update-rc.d ssh defaults && service ssh restart && service ssh status
