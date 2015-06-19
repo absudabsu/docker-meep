@@ -7,7 +7,7 @@ MEEP: http://ab-initio.mit.edu/wiki/index.php/Meep <p></p>
 python-meep: https://launchpad.net/python-meep <p></p>
 python-meep src: https://github.com/FilipDominec/python-meep-install <p></p>
 
-### Usage:
+# Usage:
 TODO: add image to docker repository, but until then...
 ## build docker image
 -> install docker on your local (HOST) machine
