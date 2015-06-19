@@ -21,11 +21,11 @@ docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker
 python siex.py
 
 #### some useful commands
-docker run -i -t ubuntu:14.04 /bin/bash # get initial image to set up everything
-docker ps -a # lists available dockers (-a list of non running containers, without -a, running ones)
-docker build -t meepdocker . # makes a docker image with local Dockerfile and tag meepdocker
-sudo docker run -it -v /home/Documents:/home/hostSRC -p 2222:22 meepdocker # open ports and link folder
-docker docker start -i id # starts the docker (-i means interactive (like bash), you should use this after the first time
+docker run -i -t ubuntu:14.04 /bin/bash Z# get initial image to set up everything
+docker ps -a \# lists available dockers (-a list of non running containers, without -a, running ones)
+docker build -t meepdocker . \# makes a docker image with local Dockerfile and tag meepdocker
+sudo docker run -it -v /home/Documents:/home/hostSRC -p 2222:22 meepdocker \# open ports and link folder
+docker docker start -i id \# starts the docker (-i means interactive (like bash), you should use this after the first time
 
 ## Notes on setup:
 Ideally, there are very few apps running in the docker, so its very lightweight. In my implementation, I run an extra ssh server so I can forward GUI windows to my host. Potentially, we could work around this by performing a "xhost +" on the HOST and simply setting the display variable "export DISPLAY=HOSTip:0", but it didn't seem to work for me. So ssh was the way to go.
