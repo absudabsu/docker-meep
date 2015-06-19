@@ -1,0 +1,20 @@
+Notes for me:
+docker run -i -t debian:jessie /bin/bash # get initial image to set up everything
+docker ps -a # lists available dockers (-a list of non running containers, without -a, running ones)
+docker docker start -i id # starts the docker (-i means interactive (like bash)
+docker build -t meepdocker # makes a docker image with local Dockerfile and tag meepdocker
+#docker run -it -v /hostOSsrc:/home/hostSRC meepdocker
+sudo docker run -it -v /home/abhe/Documents:/home/hostSRC meepdocker
+
+# to fix internet, on HOST
+pkill docker
+iptables -t nat -F
+ifconfig docker0 down
+brctl delbr docker0
+docker -d
+
+GUI:
+on host:
+xhost + (open access to display on your pc)
+inside docker container:
+DISPLAY=yourLANip:0 firefox
