@@ -14,14 +14,14 @@ TODO: add image to docker repository, but until then...
 -> git clone https://github.com/sirgogo/docker-meep.git && cd docker-meep
 -> docker build -t meepdocker .
 
-#### start a session, with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
-docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker
+#### start a session
+docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker \# with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
 
 #### enjoy!
 python siex.py
 
 #### some useful commands
-docker run -i -t ubuntu:14.04 /bin/bash Z# get initial image to set up everything
+docker run -i -t ubuntu:14.04 /bin/bash \# get initial image to set up everything
 docker ps -a \# lists available dockers (-a list of non running containers, without -a, running ones)
 docker build -t meepdocker . \# makes a docker image with local Dockerfile and tag meepdocker
 sudo docker run -it -v /home/Documents:/home/hostSRC -p 2222:22 meepdocker \# open ports and link folder
