@@ -8,10 +8,15 @@ python-meep: https://launchpad.net/python-meep <p></p>
 python-meep src: https://github.com/FilipDominec/python-meep-install <p></p>
 
 ## Usage:
-TODO: add image to docker repository, but until then...
+
+#### pull docker image
+TODO: add image to docker repository, but until then you can just build it yourself...
+
 #### build docker image
 -> install docker on your local (HOST) machine
+
 -> git clone https://github.com/sirgogo/docker-meep.git && cd docker-meep
+
 -> docker build -t meepdocker .
 
 #### start a session
@@ -22,9 +27,13 @@ python siex.py
 
 #### some useful commands
 docker run -i -t ubuntu:14.04 /bin/bash \# get initial image to set up everything
+
 docker ps -a \# lists available dockers (-a list of non running containers, without -a, running ones)
+
 docker build -t meepdocker . \# makes a docker image with local Dockerfile and tag meepdocker
+
 sudo docker run -it -v /home/Documents:/home/hostSRC -p 2222:22 meepdocker \# open ports and link folder
+
 docker docker start -i id \# starts the docker (-i means interactive (like bash), you should use this after the first time
 
 ## Notes on setup:
