@@ -15,7 +15,7 @@ python-meep src: https://github.com/FilipDominec/python-meep-install
 #### pull docker image
 docker pull sirgogo/meep-fdtd
 
-OR you can build it yourself!
+OR you can build it yourself, as follows:
 
 ###### build docker image
 -> install docker on your local (HOST) machine
