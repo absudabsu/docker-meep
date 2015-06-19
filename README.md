@@ -3,14 +3,12 @@ containerized meep (fdtd) application, for scientific computing
 
 This docker image provides a clean install of Ubuntu 14.04, MEEP, and python-meep built with openmpi.
 
-MEEP: http://ab-initio.mit.edu/wiki/index.php/Meep
-python-meep: https://launchpad.net/python-meep
-python-meep src: https://github.com/FilipDominec/python-meep-install
+MEEP: http://ab-initio.mit.edu/wiki/index.php/Meep <p></p>
+python-meep: https://launchpad.net/python-meep <p></p>
+python-meep src: https://github.com/FilipDominec/python-meep-install <p></p>
 
-
-Usage:
-
-<TODO: add image to docker repository>, but until then...
+<b>Usage</b>:
+TODO: add image to docker repository, but until then...
 ## build docker image
 --> install docker on your local (HOST) machine
 --> git clone https://github.com/sirgogo/docker-meep.git && cd docker-meep
@@ -29,7 +27,7 @@ docker build -t meepdocker . # makes a docker image with local Dockerfile and ta
 sudo docker run -it -v /home/Documents:/home/hostSRC -p 2222:22 meepdocker # open ports and link folder
 docker docker start -i id # starts the docker (-i means interactive (like bash), you should use this after the first time
 
-Notes on setup:
+<b>Notes on setup</b>:
 Ideally, there are very few apps running in the docker, so its very lightweight. In my implementation, I run an extra ssh server so I can forward GUI windows to my host. Potentially, we could work around this by performing a "xhost +" on the HOST and simply setting the display variable "export DISPLAY=HOSTip:0", but it didn't seem to work for me. So ssh was the way to go.
 
 # ps -aux
