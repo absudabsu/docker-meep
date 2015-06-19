@@ -15,7 +15,7 @@ python-meep src: https://github.com/FilipDominec/python-meep-install
 docker pull sirgogo/meep-fdtd
 
 #### start a session
-docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 meepdocker \# with access to HOST files and a port mapping HOSTip:2222 to meepdockerIP:22
+docker run -it -v /HOSTdirectory:/home/hostSRC -p 2222:22 sirgogo/meep-fdtd \# with access to HOST files and a port mapping HOSTip:2222 to meepdocker:22
 
 #### enjoy!
 python siex.py
@@ -47,3 +47,5 @@ Obviously if you log in via ssh, there would be another bash open. Also if you o
 
 #### setup of ssh inside meepdocker
 apt-get install -y openssh-server && update-rc.d ssh defaults && service ssh restart && service ssh status
+vim /etc/ssh/sshd_config \# PermitRootLogin yes, UsePAM no
+service ssh restart && service ssh status
