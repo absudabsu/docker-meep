@@ -1,11 +1,14 @@
 # docker-meep
 containerized meep (fdtd) application, for scientific computing
 
-This docker image provides a clean install of Ubuntu 14.04, MEEP, and python-meep built with openmpi.
+This docker image provides a clean install of Ubuntu 14.04, MEEP, and python-meep built with openmpi. The purpose of this software is to save useres the time and hassle of installing MEEP with python bindings. If it works... well here it is!
 
-MEEP: http://ab-initio.mit.edu/wiki/index.php/Meep <p></p>
-python-meep: https://launchpad.net/python-meep <p></p>
-python-meep src: https://github.com/FilipDominec/python-meep-install <p></p>
+MEEP: http://ab-initio.mit.edu/wiki/index.php/Meep
+
+python-meep: https://launchpad.net/python-meep
+
+python-meep src: https://github.com/FilipDominec/python-meep-install
+
 
 ## Usage:
 
