@@ -41,11 +41,14 @@ Ideally, there are very few apps running in the docker, so its very lightweight.
 
 #### ps -aux
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+
 root         1  0.0  0.0  18180  3200 ?        Ss   18:36   0:00 /bin/bash
+
 root       857  0.0  0.0  61372  3128 ?        Ss   18:44   0:00 /usr/sbin/sshd
+
 root       900  0.0  0.0  15572  2128 ?        R+   18:55   0:00 ps -aux
 
-Obviously if you log in via ssh, there would be about bash open. Also if you open python, meep, etc.. 
+Obviously if you log in via ssh, there would be another bash open. Also if you open python, meep, etc.. 
 
 #### setup of ssh inside meepdocker
 apt-get install -y openssh-server && update-rc.d ssh defaults && service ssh restart && service ssh status
