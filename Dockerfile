@@ -4,7 +4,7 @@ MAINTAINER Abhejit Rajagopal <rajagopal.abhejit@gmail.com>
 RUN apt-get update && \
 apt-get install -y wget vim git tcl && \
 apt-get install -y swig python-dev python-numpy python-scipy python-matplotlib python-pandas python-sklearn python-h5py && \
-apt-get install -y apt-get install python3-dev python3-numpy python3-scipy python3-matplotlib python3-pandas python3-h5py && \
+apt-get install -y python3-dev python3-numpy python3-scipy python3-matplotlib python3-pandas python3-h5py && \
 pip install pip --upgrade && pip install ipython[all]
 pip3 install pip3 -- upgrade && pip3 install ipython[all]
 
